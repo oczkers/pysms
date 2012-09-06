@@ -4,7 +4,7 @@ import re
 import requests
 
 def getMNC(cell):
-	''' get Mobile Network Code ( http://en.wikipedia.org/wiki/Mobile_Network_Code ) '''
+	''' return Mobile Network Code ( http://en.wikipedia.org/wiki/Mobile_Network_Code ) '''
 	opera = requests.session()
 	values = { 'msisdn':cell }	# remember about prefix
 	content = opera.post('http://download.t-mobile.pl/updir/updir.cgi', values).content
