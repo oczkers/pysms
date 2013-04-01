@@ -6,7 +6,7 @@ import requests
 
 def login(username, passwd):
     '''Returns requests session after login'''
-    opera = requests.session()
+    opera = requests.Session()
     content = opera.get('https://bramka.play.pl/composer/public/mmsCompose.do').content
     SAMLRequest = re.search('value="(.*?)"', content, re.MULTILINE|re.DOTALL).group(1)
     data = {'SAMLRequest': SAMLRequest,
