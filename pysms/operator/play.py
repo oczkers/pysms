@@ -5,7 +5,7 @@ import requests
 
 
 def login(username, passwd):
-    '''Returns requests session after login'''
+    """Returns requests session after login."""
     opera = requests.Session()
     content = opera.get('https://bramka.play.pl/composer/public/mmsCompose.do').content
     SAMLRequest = re.search('value="(.*?)"', content, re.MULTILINE|re.DOTALL).group(1)
@@ -26,7 +26,7 @@ def login(username, passwd):
 
 
 def sendSMS(username, passwd, cell, text):
-    '''Returns True if sms is sent'''
+    """Returns True if sms is sent."""
     opera = login(username, passwd)
     content = opera.get('https://bramka.play.pl/composer/public/editableSmsCompose.do').content
     randForm = re.search('name="randForm" value="(.+)"', content).group(1)

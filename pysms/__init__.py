@@ -6,7 +6,9 @@ from operator import play
 
 
 def getMNC(cell):
-    ''' return Mobile Network Code ( http://en.wikipedia.org/wiki/Mobile_Network_Code ) '''
+    """Returns Mobile Network Code.
+     (http://en.wikipedia.org/wiki/Mobile_Network_Code)
+     """
     opera = requests.Session()
     data = {'msisdn': cell}    # remember about prefix
     content = opera.post('http://download.t-mobile.pl/updir/updir.cgi', data).content
@@ -14,7 +16,7 @@ def getMNC(cell):
 
 
 def sendSMS(cell):
-    ''' send SMS '''
+    """Sends SMS."""
     mnc = getMNC(cell)
     if mnc == '06':
         network = play
