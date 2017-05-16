@@ -14,7 +14,7 @@ class PysmsTestCase(unittest.TestCase):
 
     def setUp(self):
         """Setup."""
-        #self.modules = pysms.operator.__all__
+        # self.modules = pysms.operator.__all__
         pass
 
     def tearDown(self):

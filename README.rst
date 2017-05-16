@@ -1,7 +1,7 @@
 Dependencies
 =============
 
-* requests (Python HTTP Requests for Humans™)
+* requests (Python HTTP Requests for Humansï¿½)
 
 Contributing
 ------------
